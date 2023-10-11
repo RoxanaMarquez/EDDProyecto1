@@ -4,7 +4,6 @@
  */
 package proyecto1;
 
-import GraphicInterfaces.LandingPage;
 import GraphicInterfaces.Menu;
 
 
@@ -18,11 +17,9 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        LandingPage  ventana = new LandingPage(); 
+               
+        Menu ventana = new Menu();
         ventana.setVisible(true);
-        
-        Menu ventana2 = new Menu();
-        ventana2.setVisible(true);
         // TODO code application logic here
     }
 

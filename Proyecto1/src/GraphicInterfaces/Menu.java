@@ -16,6 +16,8 @@ public class Menu extends javax.swing.JFrame {
     public Menu() {
         initComponents();
         this.setVisible(true);
+        this.setLocationRelativeTo(null);
+        this.setResizable(false);
     }
 
     /**
@@ -27,37 +29,55 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        addFriend = new javax.swing.JButton();
+        deleteFriend = new javax.swing.JButton();
+        save = new javax.swing.JButton();
+        showGraph = new javax.swing.JButton();
+        loadFile = new javax.swing.JButton();
+
+        jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setText("Agregar Amigo");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        addFriend.setText("Agregar Amigo");
+        addFriend.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                addFriendActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, 140, -1));
+        getContentPane().add(addFriend, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 160, 40));
 
-        jButton2.setText("Eliminar Amigo");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 140, -1));
+        deleteFriend.setText("Eliminar Amigo");
+        deleteFriend.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteFriendActionPerformed(evt);
+            }
+        });
+        getContentPane().add(deleteFriend, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 160, 40));
 
-        jButton3.setText("Guardar");
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 140, -1));
+        save.setText("Guardar");
+        getContentPane().add(save, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 160, 40));
 
-        jButton4.setText("Mostrar Grafo");
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 140, -1));
+        showGraph.setText("Mostrar Grafo");
+        getContentPane().add(showGraph, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 160, 40));
+
+        loadFile.setText("Cargar Archivo");
+        getContentPane().add(loadFile, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 160, 40));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void addFriendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addFriendActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        AddFriend ventana1 = new AddFriend();
+        ventana1.setVisible(true);
+    }//GEN-LAST:event_addFriendActionPerformed
+
+    private void deleteFriendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteFriendActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_deleteFriendActionPerformed
 
     /**
      * @param args the command line arguments
@@ -95,9 +115,11 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton addFriend;
+    private javax.swing.JButton deleteFriend;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JButton loadFile;
+    private javax.swing.JButton save;
+    private javax.swing.JButton showGraph;
     // End of variables declaration//GEN-END:variables
 }
