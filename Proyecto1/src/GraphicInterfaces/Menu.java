@@ -35,6 +35,8 @@ public class Menu extends javax.swing.JFrame {
         save = new javax.swing.JButton();
         showGraph = new javax.swing.JButton();
         loadFile = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -66,7 +68,14 @@ public class Menu extends javax.swing.JFrame {
         loadFile.setText("Cargar Archivo");
         getContentPane().add(loadFile, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 160, 40));
 
-        pack();
+        jTextField1.setText("jTextField1");
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, 230, 240));
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel2.setText("nombre del programa aqui");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
+
+        setBounds(0, 0, 560, 370);
     }// </editor-fold>//GEN-END:initComponents
 
     private void addFriendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addFriendActionPerformed
@@ -117,7 +126,9 @@ public class Menu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addFriend;
     private javax.swing.JButton deleteFriend;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JButton loadFile;
     private javax.swing.JButton save;
     private javax.swing.JButton showGraph;
