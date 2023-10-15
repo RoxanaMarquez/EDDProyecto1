@@ -15,7 +15,7 @@ public class AddFriend extends javax.swing.JFrame {
      */
     public AddFriend() {
         initComponents();
-        this.setVisible(true);
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -36,9 +36,13 @@ public class AddFriend extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         newRelations = new javax.swing.JTextField();
+        GoBack = new javax.swing.JButton();
+        AddNewUser = new javax.swing.JButton();
+        BackToMenu = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setToolTipText("");
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel1.add(newUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 90, 230, 30));
         jPanel1.add(newId, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 230, -1));
@@ -48,7 +52,7 @@ public class AddFriend extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel2.setText("Agregar un  Usuario");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
 
         jLabel3.setText("ID");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
@@ -59,13 +63,25 @@ public class AddFriend extends javax.swing.JFrame {
         newRelations.setText("jTextField3");
         jPanel1.add(newRelations, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 230, 100));
 
+        GoBack.setText("Regresar");
+        GoBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GoBackActionPerformed(evt);
+            }
+        });
+        jPanel1.add(GoBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, -1, -1));
+
+        AddNewUser.setText("Agregar");
+        jPanel1.add(AddNewUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 300, -1, -1));
+        jPanel1.add(BackToMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 450, 330));
+
         jDesktopPane1.setLayer(jPanel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 470, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -85,6 +101,11 @@ public class AddFriend extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void GoBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GoBackActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+    }//GEN-LAST:event_GoBackActionPerformed
 
     /**
      * @param args the command line arguments
@@ -118,11 +139,15 @@ public class AddFriend extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new AddFriend().setVisible(true);
+                
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AddNewUser;
+    private javax.swing.Box.Filler BackToMenu;
+    private javax.swing.JButton GoBack;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

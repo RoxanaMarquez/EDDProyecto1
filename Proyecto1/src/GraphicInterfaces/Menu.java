@@ -30,20 +30,23 @@ public class Menu extends javax.swing.JFrame {
     private void initComponents() {
 
         jMenuItem1 = new javax.swing.JMenuItem();
+        jFileChooser1 = new javax.swing.JFileChooser();
         addFriend = new javax.swing.JButton();
         deleteFriend = new javax.swing.JButton();
         save = new javax.swing.JButton();
         showGraph = new javax.swing.JButton();
         loadFile = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(5, 20), new java.awt.Dimension(5, 20), new java.awt.Dimension(5, 20));
 
         jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        addFriend.setText("Agregar Amigo");
+        addFriend.setText("Agregar Usuarios");
         addFriend.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addFriendActionPerformed(evt);
@@ -51,7 +54,7 @@ public class Menu extends javax.swing.JFrame {
         });
         getContentPane().add(addFriend, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 160, 40));
 
-        deleteFriend.setText("Eliminar Amigo");
+        deleteFriend.setText("Eliminar Usuarios");
         deleteFriend.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deleteFriendActionPerformed(evt);
@@ -68,14 +71,18 @@ public class Menu extends javax.swing.JFrame {
         loadFile.setText("Cargar Archivo");
         getContentPane().add(loadFile, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 160, 40));
 
-        jTextField1.setText("jTextField1");
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, 230, 240));
-
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel2.setText("nombre del programa aqui");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
 
-        setBounds(0, 0, 560, 370);
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 80, -1, 240));
+        getContentPane().add(filler1, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 10, 530, 380));
+
+        setBounds(0, 0, 582, 403);
     }// </editor-fold>//GEN-END:initComponents
 
     private void addFriendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addFriendActionPerformed
@@ -86,6 +93,8 @@ public class Menu extends javax.swing.JFrame {
 
     private void deleteFriendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteFriendActionPerformed
         // TODO add your handling code here:
+        DeleteFriend ventana2 = new DeleteFriend();
+        ventana2.setVisible(true);
     }//GEN-LAST:event_deleteFriendActionPerformed
 
     /**
@@ -126,9 +135,12 @@ public class Menu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addFriend;
     private javax.swing.JButton deleteFriend;
+    private javax.swing.Box.Filler filler1;
+    private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JButton loadFile;
     private javax.swing.JButton save;
     private javax.swing.JButton showGraph;
