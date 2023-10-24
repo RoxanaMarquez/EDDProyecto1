@@ -15,9 +15,10 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        IG1 IG1 = new IG1();
+        IG1.setVisible(true);
         
         
-                
     }
     
 }

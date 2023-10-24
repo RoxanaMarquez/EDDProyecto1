@@ -26,33 +26,33 @@ public class IG2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        B4 = new javax.swing.JButton();
+        B5 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        B3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Agregar usuario");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        B4.setText("Agregar usuario");
+        B4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                B4ActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Agregar relaciones");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        B5.setText("Agregar relaciones");
+        B5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                B5ActionPerformed(evt);
             }
         });
 
         jLabel1.setText("Elija una opción:");
 
-        jButton3.setText("Eliminar usuario");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        B3.setText("Eliminar usuario");
+        B3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                B3ActionPerformed(evt);
             }
         });
 
@@ -62,13 +62,13 @@ public class IG2 extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addComponent(jButton1)
+                .addComponent(B4)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton2)
+                        .addComponent(B5)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton3))
+                        .addComponent(B3))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(14, 14, 14)
                         .addComponent(jLabel1)))
@@ -81,26 +81,32 @@ public class IG2 extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addComponent(B4)
+                    .addComponent(B5)
+                    .addComponent(B3))
                 .addGap(21, 21, 21))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void B4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        IG3 IG3 = new IG3();
+        IG3.setVisible(true);
+    }//GEN-LAST:event_B4ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void B5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B5ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+        IG5 IG5 = new IG5();
+        IG5.setVisible(true);
+    }//GEN-LAST:event_B5ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void B3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+        IG4 IG4 = new IG4();
+        IG4.setVisible(true);
+    }//GEN-LAST:event_B3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -138,9 +144,9 @@ public class IG2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton B3;
+    private javax.swing.JButton B4;
+    private javax.swing.JButton B5;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
