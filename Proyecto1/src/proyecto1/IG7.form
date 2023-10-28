@@ -33,15 +33,15 @@
                       <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="EU" alignment="0" min="-2" pref="304" max="-2" attributes="0"/>
+                          <Component id="NA" alignment="0" min="-2" pref="304" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="155" max="-2" attributes="0"/>
-                      <Component id="okB1" min="-2" pref="53" max="-2" attributes="0"/>
+                      <Component id="okB1" min="-2" pref="56" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="35" max="32767" attributes="0"/>
+              <EmptySpace pref="31" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -52,25 +52,15 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="EU" min="-2" max="-2" attributes="0"/>
+              <Component id="NA" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="okB1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="10" max="32767" attributes="0"/>
+              <EmptySpace pref="21" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Nombre de usuario a eliminar de la forma: @username"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="EU">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EUActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JButton" name="okB1">
       <Properties>
         <Property name="text" type="java.lang.String" value="OK"/>
@@ -85,6 +75,19 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nombre del nuevo archivo:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="NA">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="FileName"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NAActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
