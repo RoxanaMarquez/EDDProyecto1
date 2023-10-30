@@ -6,6 +6,7 @@ package proyecto1;
 
 import java.io.File;
 import java.io.IOException;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -101,12 +102,12 @@ public class IG7 extends javax.swing.JFrame {
         try {
             File myObj = new File((String) filename.getElement());
             if (myObj.createNewFile()) {
-                System.out.println("Archivo creado: " + myObj.getName());
+                JOptionPane.showMessageDialog(null, "Archivo creado: " + myObj.getName());
             } else {
-                System.out.println("El archivo ya existe.");
+                JOptionPane.showMessageDialog(null, "El archivo ya existe.");
             }
         } catch (IOException e) {
-            System.out.println("Ha ocurrido un error.");
+            JOptionPane.showMessageDialog(null, "Ha ocurrido un error.");
         }
     }//GEN-LAST:event_okB1ActionPerformed
 
