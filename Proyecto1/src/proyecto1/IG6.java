@@ -162,8 +162,6 @@ public class IG6 extends javax.swing.JFrame {
 
     private void B5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B5ActionPerformed
         // TODO add your handling code here:
-        IG5 IG5 = new IG5();
-        IG5.setVisible(true);
     }//GEN-LAST:event_B5ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -180,7 +178,7 @@ public class IG6 extends javax.swing.JFrame {
     private void B8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B8ActionPerformed
         // TODO add your handling code here:
         JFileChooser fileChooser = new JFileChooser();
-        int result = fileChooser.showOpenDialog(null);
+        fileChooser.showOpenDialog(null);
 
         FileName filename = new FileName();
         File fName = fileChooser.getSelectedFile();

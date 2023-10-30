@@ -4,6 +4,7 @@
  */
 package proyecto1;
 
+
 /**
  *
  * @author alemo
@@ -11,7 +12,7 @@ package proyecto1;
 public class IG4 extends javax.swing.JFrame {
 
     /**
-     * Creates new form IG4
+     * Creates new form IG3
      */
     public IG4() {
         initComponents();
@@ -27,81 +28,120 @@ public class IG4 extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        EU = new javax.swing.JTextField();
-        okB1 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        RU = new javax.swing.JTextField();
+        Back3 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        EU = new javax.swing.JButton();
+        ER = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        ReU = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Nombre de usuario a eliminar de la forma: @username");
+        jLabel1.setText("Nombre de usuario a agregar");
 
+        RU.setText("@username");
+        RU.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RUActionPerformed(evt);
+            }
+        });
+
+        Back3.setText("<-");
+        Back3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Back3ActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setText("Nombre relacionaes");
+
+        EU.setText("Eliminar Usuario");
         EU.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EUActionPerformed(evt);
             }
         });
 
-        okB1.setText("OK");
-        okB1.addActionListener(new java.awt.event.ActionListener() {
+        ER.setText("Eliminar Relación");
+        ER.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                okB1ActionPerformed(evt);
+                ERActionPerformed(evt);
             }
         });
 
-        jButton1.setText("<-");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
+        ReU.setColumns(20);
+        ReU.setRows(5);
+        ReU.setText("@username, @username, ...");
+        jScrollPane1.setViewportView(ReU);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Back3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(16, 16, 16)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
-                            .addComponent(EU, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(155, 155, 155)
-                        .addComponent(okB1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(35, Short.MAX_VALUE))
+                            .addComponent(RU, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(ER, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(EU, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(27, 27, 27)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 18, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jButton1)
+                .addComponent(Back3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(EU, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(okB1)
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2))
+                .addGap(12, 12, 12)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(RU, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(EU)
+                        .addGap(18, 18, 18)
+                        .addComponent(ER))
+                    .addComponent(jScrollPane1))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void EUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EUActionPerformed
+    private void RUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RUActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_EUActionPerformed
+    }//GEN-LAST:event_RUActionPerformed
 
-    private void okB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_okB1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_okB1ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void Back3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Back3ActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_Back3ActionPerformed
+
+    private void EUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EUActionPerformed
+        // TODO add your handling code here:
+        String usernew = RU.getText();
+
+    }//GEN-LAST:event_EUActionPerformed
+
+    private void ERActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ERActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ERActionPerformed
 
     /**
      * @param args the command line arguments
@@ -129,6 +169,7 @@ public class IG4 extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(IG4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -139,9 +180,13 @@ public class IG4 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField EU;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton Back3;
+    private javax.swing.JButton ER;
+    private javax.swing.JButton EU;
+    private javax.swing.JTextField RU;
+    private javax.swing.JTextArea ReU;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JButton okB1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
