@@ -16,7 +16,7 @@ public class FileName {
     }
 
     public void setElement(Object element) {
-        this.element = element+".txt";
+        this.element = element;
     }
 
 }

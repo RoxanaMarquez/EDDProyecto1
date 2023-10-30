@@ -12,12 +12,12 @@ import javax.swing.JOptionPane;
  *
  * @author alemo
  */
-public class IG7 extends javax.swing.JFrame {
+public class IG8 extends javax.swing.JFrame {
 
     /**
      * Creates new form IG7
      */
-    public IG7() {
+    public IG8() {
         initComponents();
     }
 
@@ -51,7 +51,7 @@ public class IG7 extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Nombre del nuevo archivo:");
+        jLabel1.setText("Nombre del archivo a eliminar:");
 
         NA.setText("FileName");
         NA.addActionListener(new java.awt.event.ActionListener() {
@@ -97,18 +97,12 @@ public class IG7 extends javax.swing.JFrame {
 
     private void okB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_okB1ActionPerformed
         // TODO add your handling code here:
-        FileName filename = new FileName();
-        filename.setElement(NA.getText()+".txt");
-        try {
-            File myObj = new File((String) filename.getElement());
-            if (myObj.createNewFile()) {
-                JOptionPane.showMessageDialog(null, "Archivo creado: " + myObj.getName());
-            } else {
-                JOptionPane.showMessageDialog(null, "El archivo ya existe.");
-            }
-        } catch (IOException e) {
-            JOptionPane.showMessageDialog(null, "Ha ocurrido un error.");
-        }
+        File myObj = new File(NA.getText()+".txt"); 
+        if (myObj.delete()) { 
+            System.out.println("Deleted the file: " + myObj.getName());
+        } else {
+            System.out.println("Failed to delete the file.");
+        } 
     }//GEN-LAST:event_okB1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -137,20 +131,21 @@ public class IG7 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(IG7.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IG8.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(IG7.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IG8.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(IG7.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IG8.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(IG7.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IG8.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new IG7().setVisible(true);
+                new IG8().setVisible(true);
             }
         });
     }

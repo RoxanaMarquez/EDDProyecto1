@@ -4,6 +4,7 @@
  */
 package proyecto1;
 
+import java.io.File;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
@@ -180,20 +181,16 @@ public class IG6 extends javax.swing.JFrame {
         // TODO add your handling code here:
         JFileChooser fileChooser = new JFileChooser();
         int result = fileChooser.showOpenDialog(null);
-        System.out.println(result);
-        System.out.println(JFileChooser.APPROVE_OPTION);
-        
-        
-        if (result == JFileChooser.APPROVE_OPTION) {
-            JOptionPane.showMessageDialog(null, "Archivo cargado exitosamente!");
-        }
-        
-        /*JFileChooserTest test = new JFileChooserTest();
-        test.main();*/
+
+        FileName filename = new FileName();
+        File fName = fileChooser.getSelectedFile();
+        filename.setElement(fName);
     }//GEN-LAST:event_B8ActionPerformed
 
     private void B9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B9ActionPerformed
         // TODO add your handling code here:
+        IG8 IG8 = new IG8();
+        IG8.setVisible(true);
     }//GEN-LAST:event_B9ActionPerformed
 
     /**
